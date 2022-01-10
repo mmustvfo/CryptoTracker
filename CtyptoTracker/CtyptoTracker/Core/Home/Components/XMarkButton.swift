@@ -1,0 +1,27 @@
+//
+//  XMarkButton.swift
+//  CtyptoTracker
+//
+//  Created by Mustafo on 09/06/21.
+//
+
+import SwiftUI
+
+struct XMarkButton: View {
+    @Environment(\.presentationMode) var presentationMode
+    var body: some View {
+        Button(action: {
+            presentationMode.wrappedValue.dismiss()
+        }, label: {
+            Image(systemName: "xmark")
+                .imageScale(.large)
+                .foregroundColor(Color.colorTheme.accentColor)
+        })
+    }
+}
+
+struct XMarkButton_Previews: PreviewProvider {
+    static var previews: some View {
+        XMarkButton()
+    }
+}
